@@ -1,8 +1,21 @@
-import { defineConfig, presetAttributify, presetUno, presetIcons } from 'unocss'
+import {
+    defineConfig,
+    presetAttributify,
+    presetUno,
+    presetIcons,
+    transformerDirectives,
+    transformerVariantGroup,
+    presetWebFonts,
+} from 'unocss'
 
 export default defineConfig({
     // ...UnoCSS options
-    presets: [presetUno(), presetAttributify(), presetIcons({ scale: 1.2, warn: true })],
+    presets: [
+        presetUno(),
+        presetAttributify(),
+        presetWebFonts({ provider: 'fontshare' }),
+        presetIcons({ scale: 1.2, warn: true }),
+    ],
     shortcuts: [
         ['wh-full', 'w-full h-full'],
         ['f-c-c', 'flex justify-center items-center'],
@@ -10,7 +23,7 @@ export default defineConfig({
         ['text-ellipsis', 'truncate'],
         [
             'icon-btn',
-            'text-16 inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-primary !outline-none',
+            'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600',
         ],
     ],
     rules: [
@@ -25,8 +38,13 @@ export default defineConfig({
     ],
     theme: {
         colors: {
-            primary: 'var(--primary-color)',
-            dark_bg: 'var(--dark-bg)',
+            veryCool: '#0000ff', // class="text-very-cool"
+            brand: {
+                primary: 'hsla(var(--hue, 217), 78%, 51%)', //class="bg-brand-primary"
+            },
+            //     primary: 'var(--primary-color)',
+            //     dark_bg: 'var(--dark-bg)',
         },
     },
+    transformers: [transformerDirectives(), transformerVariantGroup()],
 })
