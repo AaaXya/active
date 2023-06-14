@@ -15,5 +15,8 @@
     "@vueuse/core": "^10.1.2",
     "@vueuse/nuxt": "^10.1.2",
     "nuxt": "^3.5.0"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.2"
   }
 }

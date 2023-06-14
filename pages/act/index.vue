@@ -2,34 +2,20 @@
     definePageMeta({
         layout: 'act'
     })
+
     const customer = useCookie('customer')
-    // let condition = false
-    function alertDialog() {
-        // condition = true
-        console.log('弹出 详情');
-
-    }
-    console.log(customer);
-    function verifyUsers() {
-        if (!customer.value) {
-            alertDialog()
-
-        } else {
-            //go activity
-            console.log('go to activity page');
-
+    async function state() {
+        const v = customer.value
+        if (!v) {
+            return
         }
-
+        await navigateTo('/act/' + v)
     }
-    onMounted(() => {
-        verifyUsers()
-    })
-
+    state()
 </script>
 
 <template>
     <div>
-        <h2>Act</h2>
         <Dialog />
 
         <!-- userid:{{ id }} -->

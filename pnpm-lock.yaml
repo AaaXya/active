@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  nanoid:
+    specifier: ^4.0.2
+    version: registry.npmmirror.com/nanoid@4.0.2
+
 devDependencies:
   '@nuxt/devtools':
     specifier: ^0.5.0
@@ -5654,7 +5659,6 @@ packages:
     version: 4.0.2
     engines: {node: ^14 || ^16 || >=18}
     hasBin: true
-    dev: true
 
   registry.npmmirror.com/negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/negotiator/-/negotiator-0.6.3.tgz}

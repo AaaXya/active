@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-
-  const open = ref(true)
-
+  const customer = useCookie('customer')
   async function shift() {
-    console.log(open.value);
+    const uid = nanoid()
+    const { data, error } = await useFetch('/api/programs', {
+      query: {
+        uid,
+        dispose: 'au'
+      }
+    })
 
-    open.value = !open.value
+    if (error.value)
+      throw alert(error.value)
 
-    const { data: res, error } = await useFetch('/api/user-id')
-    if (error.value) {
-      console.error(error.value);//'出现了一个预期之外的错误'
-      alert(error.value)
-    }
+    customer.value = data.value
 
-    //res会返回一个用户id码 
-    //将码存在cookie里
+    await navigateTo('/act/' + uid)
   }
 </script>
 
@@ -24,7 +24,6 @@
       我已阅读活动须知 确定
       Open Modal
     </button>
-    {{ open }}
   </div>
 </template>
 

@@ -1,3 +1,3 @@
 export default defineEventHandler((event) => {
-    return { message: 'Hello user-id' }
+  return 'Hello dispose'
 })
