@@ -29,6 +29,12 @@ export default defineConfig({
     rules: [
         [/^bc-(.+)$/, ([, color]) => ({ 'border-color': `#${color}` })],
         [
+            'motify',
+            {
+                background: 'linear-gradient(#ec3767, #f927c9)',
+            },
+        ],
+        [
             'card-shadow',
             {
                 'box-shadow':
@@ -38,7 +44,7 @@ export default defineConfig({
     ],
     theme: {
         colors: {
-            veryCool: '#0000ff', // class="text-very-cool"
+            bgMotify: 'linear-gradient(#ec3767, #f927c9)',
             brand: {
                 primary: 'hsla(var(--hue, 217), 78%, 51%)', //class="bg-brand-primary"
             },

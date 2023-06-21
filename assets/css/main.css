@@ -3,4 +3,8 @@ html.dark {
     background: #222;
     color: #fff
 }
-
+#__nuxt{
+}
+body {
+    margin:0
+}

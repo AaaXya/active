@@ -3,15 +3,6 @@
         layout: 'act'
     })
 
-    const customer = useCookie('customer')
-    async function state() {
-        const v = customer.value
-        if (!v) {
-            return
-        }
-        await navigateTo('/act/' + v)
-    }
-    state()
 </script>
 
 <template>

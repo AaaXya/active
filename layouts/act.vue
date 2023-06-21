@@ -2,10 +2,7 @@
 </script>
 
 <template>
-  <div>
-    Layout: act
-
-    <p>--------------</p>
+  <div motify min-h-screen f-c-c flex-col>
     <slot />
   </div>
 </template>

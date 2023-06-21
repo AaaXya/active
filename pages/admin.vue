@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 
   const getList = async () => {
-    const { data, error } = await useFetch('/api/storage', {
-      method: 'post',
-      body: { test: 123 }
+    const { data, error } = await useFetch('/api/programs', {
+      query: {
+        dispose: 'au'
+      }
     })
     console.log(data);
 

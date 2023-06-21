@@ -1,10 +1,6 @@
 <script lang="ts" setup>
 
   const { data: map } = await useFetch('/api/map')
-  const { x, y } = useMouse()
-
-  const isDark = useDark()
-  const toggleDark = useToggle(isDark)
 </script>
 
 <template>
@@ -16,13 +12,12 @@
           <NuxtLink :to=item>{{ path }}</NuxtLink>
         </li>
         <li>
-          <button @click="toggleDark()">d/l</button>
+          <button @click="">d/l</button>
         </li>
       </ul>
     </nav>
   </header>
   <div>
-    <div>pos: {{ x }}, {{ y }}</div>
     <slot />
   </div>
 </template>

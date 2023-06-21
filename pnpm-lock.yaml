@@ -10,9 +10,6 @@ dependencies:
     version: registry.npmmirror.com/nanoid@4.0.2
 
 devDependencies:
-  '@invictus.codes/nuxt-vuetify':
-    specifier: ^0.2.20
-    version: registry.npmmirror.com/@invictus.codes/nuxt-vuetify@0.2.20(vite@4.3.8)(vue@3.3.4)
   '@nuxt/devtools':
     specifier: ^0.5.0
     version: registry.npmmirror.com/@nuxt/devtools@0.5.0(nuxt@3.5.0)(vite@4.3.8)
@@ -22,12 +19,6 @@ devDependencies:
   '@unocss/nuxt':
     specifier: ^0.51.13
     version: registry.npmmirror.com/@unocss/nuxt@0.51.13(postcss@8.4.23)(vite@4.3.8)(webpack@5.83.1)
-  '@vueuse/core':
-    specifier: ^10.1.2
-    version: registry.npmmirror.com/@vueuse/core@10.1.2(vue@3.3.4)
-  '@vueuse/nuxt':
-    specifier: ^10.1.2
-    version: registry.npmmirror.com/@vueuse/nuxt@10.1.2(nuxt@3.5.0)(vue@3.3.4)
   nuxt:
     specifier: ^3.5.0
     version: registry.npmmirror.com/nuxt@3.5.0(@types/node@18.0.0)
@@ -764,27 +755,6 @@ packages:
       local-pkg: registry.npmmirror.com/local-pkg@0.4.3
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  registry.npmmirror.com/@invictus.codes/nuxt-vuetify@0.2.20(vite@4.3.8)(vue@3.3.4):
-    resolution: {integrity: sha512-Q6c/aWfuK0cntG6cQo4FkbXNsI63D4O80v0MOtxKLap98P8cWFKrznycbGHrHkeeqADWehZii94XjmDhrT8Fkw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@invictus.codes/nuxt-vuetify/-/nuxt-vuetify-0.2.20.tgz}
-    id: registry.npmmirror.com/@invictus.codes/nuxt-vuetify/0.2.20
-    name: '@invictus.codes/nuxt-vuetify'
-    version: 0.2.20
-    engines: {node: '>=16.0.0', npm: '>=8.0.0', pnpm: '>=7.0.0', yarn: '>=1.0.0'}
-    dependencies:
-      '@nuxt/kit': registry.npmmirror.com/@nuxt/kit@3.5.0
-      defu: registry.npmmirror.com/defu@6.1.2
-      vite-plugin-vuetify: registry.npmmirror.com/vite-plugin-vuetify@1.0.2(vite@4.3.8)(vue@3.3.4)(vuetify@3.3.3)
-      vuetify: registry.npmmirror.com/vuetify@3.3.3(vite-plugin-vuetify@1.0.2)(vue@3.3.4)
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-      - typescript
-      - vite
-      - vue
-      - vue-i18n
-      - webpack-plugin-vuetify
     dev: true
 
   registry.npmmirror.com/@ioredis/commands@1.2.0:
@@ -1549,12 +1519,6 @@ packages:
     version: 1.20.2
     dev: true
 
-  registry.npmmirror.com/@types/web-bluetooth@0.0.17:
-    resolution: {integrity: sha512-4p9vcSmxAayx72yn70joFoL44c9MO/0+iVEBIQXe3v2h2SiAsEIo/G5v6ObFWvNKRFjbrVadNf9LqEEZeQPzdA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.17.tgz}
-    name: '@types/web-bluetooth'
-    version: 0.0.17
-    dev: true
-
   registry.npmmirror.com/@unhead/dom@1.1.27:
     resolution: {integrity: sha512-sUrzpKIVvFp8TFx1mgp5t0k5ts1+KmgjMgRRuvRTZMBMVeGQRLSuL3uo34iwuFmKxeI6BXT5lVBk5H02c1XdGg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unhead/dom/-/dom-1.1.27.tgz}
     name: '@unhead/dom'
@@ -2105,75 +2069,6 @@ packages:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/shared/-/shared-3.3.4.tgz}
     name: '@vue/shared'
     version: 3.3.4
-    dev: true
-
-  registry.npmmirror.com/@vuetify/loader-shared@1.7.1(vue@3.3.4)(vuetify@3.3.3):
-    resolution: {integrity: sha512-kLUvuAed6RCvkeeTNJzuy14pqnkur8lTuner7v7pNE/kVhPR97TuyXwBSBMR1cJeiLiOfu6SF5XlCYbXByEx1g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vuetify/loader-shared/-/loader-shared-1.7.1.tgz}
-    id: registry.npmmirror.com/@vuetify/loader-shared/1.7.1
-    name: '@vuetify/loader-shared'
-    version: 1.7.1
-    peerDependencies:
-      vue: ^3.0.0
-      vuetify: ^3.0.0-beta.4
-    dependencies:
-      find-cache-dir: registry.npmmirror.com/find-cache-dir@3.3.2
-      upath: registry.npmmirror.com/upath@2.0.1
-      vue: registry.npmmirror.com/vue@3.3.4
-      vuetify: registry.npmmirror.com/vuetify@3.3.3(vite-plugin-vuetify@1.0.2)(vue@3.3.4)
-    dev: true
-
-  registry.npmmirror.com/@vueuse/core@10.1.2(vue@3.3.4):
-    resolution: {integrity: sha512-roNn8WuerI56A5uiTyF/TEYX0Y+VKlhZAF94unUfdhbDUI+NfwQMn4FUnUscIRUhv3344qvAghopU4bzLPNFlA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/core/-/core-10.1.2.tgz}
-    id: registry.npmmirror.com/@vueuse/core/10.1.2
-    name: '@vueuse/core'
-    version: 10.1.2
-    dependencies:
-      '@types/web-bluetooth': registry.npmmirror.com/@types/web-bluetooth@0.0.17
-      '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata@10.1.2
-      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared@10.1.2(vue@3.3.4)
-      vue-demi: registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: true
-
-  registry.npmmirror.com/@vueuse/metadata@10.1.2:
-    resolution: {integrity: sha512-3mc5BqN9aU2SqBeBuWE7ne4OtXHoHKggNgxZR2K+zIW4YLsy6xoZ4/9vErQs6tvoKDX6QAqm3lvsrv0mczAwIQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/metadata/-/metadata-10.1.2.tgz}
-    name: '@vueuse/metadata'
-    version: 10.1.2
-    dev: true
-
-  registry.npmmirror.com/@vueuse/nuxt@10.1.2(nuxt@3.5.0)(vue@3.3.4):
-    resolution: {integrity: sha512-X9o5WCmNs1+6XztP1Uh9+H7/jGeIjwSRNQdwCWRKCDkxPlbgi9iLnDRYnKDY++JPY3nbB6jTDOVgZDrpaAU5kg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/nuxt/-/nuxt-10.1.2.tgz}
-    id: registry.npmmirror.com/@vueuse/nuxt/10.1.2
-    name: '@vueuse/nuxt'
-    version: 10.1.2
-    peerDependencies:
-      nuxt: ^3.0.0
-    dependencies:
-      '@nuxt/kit': registry.npmmirror.com/@nuxt/kit@3.5.0
-      '@vueuse/core': registry.npmmirror.com/@vueuse/core@10.1.2(vue@3.3.4)
-      '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata@10.1.2
-      local-pkg: registry.npmmirror.com/local-pkg@0.4.3
-      nuxt: registry.npmmirror.com/nuxt@3.5.0(@types/node@18.0.0)
-      vue-demi: registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - rollup
-      - supports-color
-      - vue
-    dev: true
-
-  registry.npmmirror.com/@vueuse/shared@10.1.2(vue@3.3.4):
-    resolution: {integrity: sha512-1uoUTPBlgyscK9v6ScGeVYDDzlPSFXBlxuK7SfrDGyUTBiznb3mNceqhwvZHjtDRELZEN79V5uWPTF1VDV8svA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/shared/-/shared-10.1.2.tgz}
-    id: registry.npmmirror.com/@vueuse/shared/10.1.2
-    name: '@vueuse/shared'
-    version: 10.1.2
-    dependencies:
-      vue-demi: registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
     dev: true
 
   registry.npmmirror.com/@webassemblyjs/ast@1.11.6:
@@ -3974,27 +3869,6 @@ packages:
       to-regex-range: registry.npmmirror.com/to-regex-range@5.0.1
     dev: true
 
-  registry.npmmirror.com/find-cache-dir@3.3.2:
-    resolution: {integrity: sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/find-cache-dir/-/find-cache-dir-3.3.2.tgz}
-    name: find-cache-dir
-    version: 3.3.2
-    engines: {node: '>=8'}
-    dependencies:
-      commondir: registry.npmmirror.com/commondir@1.0.1
-      make-dir: registry.npmmirror.com/make-dir@3.1.0
-      pkg-dir: registry.npmmirror.com/pkg-dir@4.2.0
-    dev: true
-
-  registry.npmmirror.com/find-up@4.1.0:
-    resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/find-up/-/find-up-4.1.0.tgz}
-    name: find-up
-    version: 4.1.0
-    engines: {node: '>=8'}
-    dependencies:
-      locate-path: registry.npmmirror.com/locate-path@5.0.0
-      path-exists: registry.npmmirror.com/path-exists@4.0.0
-    dev: true
-
   registry.npmmirror.com/find-up@5.0.0:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/find-up/-/find-up-5.0.0.tgz}
     name: find-up
@@ -5169,15 +5043,6 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  registry.npmmirror.com/locate-path@5.0.0:
-    resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/locate-path/-/locate-path-5.0.0.tgz}
-    name: locate-path
-    version: 5.0.0
-    engines: {node: '>=8'}
-    dependencies:
-      p-locate: registry.npmmirror.com/p-locate@4.1.0
-    dev: true
-
   registry.npmmirror.com/locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/locate-path/-/locate-path-6.0.0.tgz}
     name: locate-path
@@ -6316,15 +6181,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  registry.npmmirror.com/p-limit@2.3.0:
-    resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/p-limit/-/p-limit-2.3.0.tgz}
-    name: p-limit
-    version: 2.3.0
-    engines: {node: '>=6'}
-    dependencies:
-      p-try: registry.npmmirror.com/p-try@2.2.0
-    dev: true
-
   registry.npmmirror.com/p-limit@3.1.0:
     resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/p-limit/-/p-limit-3.1.0.tgz}
     name: p-limit
@@ -6332,15 +6188,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yocto-queue: registry.npmmirror.com/yocto-queue@0.1.0
-    dev: true
-
-  registry.npmmirror.com/p-locate@4.1.0:
-    resolution: {integrity: sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/p-locate/-/p-locate-4.1.0.tgz}
-    name: p-locate
-    version: 4.1.0
-    engines: {node: '>=8'}
-    dependencies:
-      p-limit: registry.npmmirror.com/p-limit@2.3.0
     dev: true
 
   registry.npmmirror.com/p-locate@5.0.0:
@@ -6359,13 +6206,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       aggregate-error: registry.npmmirror.com/aggregate-error@3.1.0
-    dev: true
-
-  registry.npmmirror.com/p-try@2.2.0:
-    resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/p-try/-/p-try-2.2.0.tgz}
-    name: p-try
-    version: 2.2.0
-    engines: {node: '>=6'}
     dev: true
 
   registry.npmmirror.com/pacote@15.2.0:
@@ -6518,15 +6358,6 @@ packages:
     name: pify
     version: 2.3.0
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  registry.npmmirror.com/pkg-dir@4.2.0:
-    resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pkg-dir/-/pkg-dir-4.2.0.tgz}
-    name: pkg-dir
-    version: 4.2.0
-    engines: {node: '>=8'}
-    dependencies:
-      find-up: registry.npmmirror.com/find-up@4.1.0
     dev: true
 
   registry.npmmirror.com/pkg-types@1.0.3:
@@ -8292,13 +8123,6 @@ packages:
       setimmediate: registry.npmmirror.com/setimmediate@1.0.5
     dev: true
 
-  registry.npmmirror.com/upath@2.0.1:
-    resolution: {integrity: sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/upath/-/upath-2.0.1.tgz}
-    name: upath
-    version: 2.0.1
-    engines: {node: '>=4'}
-    dev: true
-
   registry.npmmirror.com/update-browserslist-db@1.0.11(browserslist@4.21.5):
     resolution: {integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/update-browserslist-db/-/update-browserslist-db-1.0.11.tgz}
     id: registry.npmmirror.com/update-browserslist-db/1.0.11
@@ -8478,26 +8302,6 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmmirror.com/vite-plugin-vuetify@1.0.2(vite@4.3.8)(vue@3.3.4)(vuetify@3.3.3):
-    resolution: {integrity: sha512-MubIcKD33O8wtgQXlbEXE7ccTEpHZ8nPpe77y9Wy3my2MWw/PgehP9VqTp92BLqr0R1dSL970Lynvisx3UxBFw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-plugin-vuetify/-/vite-plugin-vuetify-1.0.2.tgz}
-    id: registry.npmmirror.com/vite-plugin-vuetify/1.0.2
-    name: vite-plugin-vuetify
-    version: 1.0.2
-    engines: {node: '>=12'}
-    peerDependencies:
-      vite: ^2.7.0 || ^3.0.0 || ^4.0.0
-      vuetify: ^3.0.0-beta.4
-    dependencies:
-      '@vuetify/loader-shared': registry.npmmirror.com/@vuetify/loader-shared@1.7.1(vue@3.3.4)(vuetify@3.3.3)
-      debug: registry.npmmirror.com/debug@4.3.4
-      upath: registry.npmmirror.com/upath@2.0.1
-      vite: registry.npmmirror.com/vite@4.3.8(@types/node@18.0.0)
-      vuetify: registry.npmmirror.com/vuetify@3.3.3(vite-plugin-vuetify@1.0.2)(vue@3.3.4)
-    transitivePeerDependencies:
-      - supports-color
-      - vue
-    dev: true
-
   registry.npmmirror.com/vite@4.3.8(@types/node@18.0.0):
     resolution: {integrity: sha512-uYB8PwN7hbMrf4j1xzGDk/lqjsZvCDbt/JC5dyfxc19Pg8kRm14LinK/uq+HSLNswZEoKmweGdtpbnxRtrAXiQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.3.8.tgz}
     id: registry.npmmirror.com/vite/4.3.8
@@ -8596,24 +8400,6 @@ packages:
       ufo: registry.npmmirror.com/ufo@1.1.2
     dev: true
 
-  registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4):
-    resolution: {integrity: sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.5.tgz}
-    id: registry.npmmirror.com/vue-demi/0.14.5
-    name: vue-demi
-    version: 0.14.5
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue: registry.npmmirror.com/vue@3.3.4
-    dev: true
-
   registry.npmmirror.com/vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-devtools-stub/-/vue-devtools-stub-0.1.0.tgz}
     name: vue-devtools-stub
@@ -8642,32 +8428,6 @@ packages:
       '@vue/runtime-dom': registry.npmmirror.com/@vue/runtime-dom@3.3.4
       '@vue/server-renderer': registry.npmmirror.com/@vue/server-renderer@3.3.4(vue@3.3.4)
       '@vue/shared': registry.npmmirror.com/@vue/shared@3.3.4
-    dev: true
-
-  registry.npmmirror.com/vuetify@3.3.3(vite-plugin-vuetify@1.0.2)(vue@3.3.4):
-    resolution: {integrity: sha512-oLpm6L6Zvf4b7Ua8V3INnUkGoxbi04O68ymEbBDLrPFzmIkzAcwd9L/2Ega582PRJnjTBBZapa6KdmosvhVvgA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vuetify/-/vuetify-3.3.3.tgz}
-    id: registry.npmmirror.com/vuetify/3.3.3
-    name: vuetify
-    version: 3.3.3
-    engines: {node: ^12.20 || >=14.13}
-    peerDependencies:
-      typescript: '>=4.7'
-      vite-plugin-vuetify: ^1.0.0-alpha.12
-      vue: ^3.2.0
-      vue-i18n: ^9.0.0
-      webpack-plugin-vuetify: ^2.0.0-alpha.11
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-      vite-plugin-vuetify:
-        optional: true
-      vue-i18n:
-        optional: true
-      webpack-plugin-vuetify:
-        optional: true
-    dependencies:
-      vite-plugin-vuetify: registry.npmmirror.com/vite-plugin-vuetify@1.0.2(vite@4.3.8)(vue@3.3.4)(vuetify@3.3.3)
-      vue: registry.npmmirror.com/vue@3.3.4
     dev: true
 
   registry.npmmirror.com/wait-on@7.0.1:
