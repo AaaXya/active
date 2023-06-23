@@ -6,9 +6,4 @@ export default defineNuxtConfig({
             title: 'Test title',
         },
     },
-
-    css: [
-        // CSS file in the project
-        '@/assets/css/main.css',
-    ],
 })

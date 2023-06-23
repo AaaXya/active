@@ -3,31 +3,32 @@ type UserItem = {
     cumulative?: number
 }
 type EnumsKeys = 'au' | 'ds' | 'ss' | 'xxx---ga'
+import { nanoid } from 'nanoid'
 let user = new Map<string, UserItem | null>()
-
+const basic = { code: null, cumulative: 0 }
 function addUser(p: string) {
-    user.set(p, { code: null })
+    user.set(p, basic)
     return p
 }
-
+function analysisUserItem(x: string, options: UserItem) {
+    if (!user.get(x)) return basic
+    return Object.assign(user.get(x) as UserItem, options)
+}
 function delStorage(p: string) {
-    user.set(p, { code: null })
+    user.set(p, analysisUserItem(p, { code: null }))
     return p
 }
-function setStorage(p: string, options: UserItem) {
-    const storage = user.get(p)
-    if (!storage) {
-        user.set(p, options)
-    } else {
-        const { code, cumulative } = storage
-        user.set(p, { code: code || null, cumulative: cumulative || 0 })
-        console.log(user.get(p))
-    }
+function setStorage(p: string, setv: UserItem) {
+    user.set(p, analysisUserItem(p, setv))
     return p
 }
 function getAll() {
     return user
 }
+function generateActCode() {
+    console.log(nanoid())
+}
+
 const enums = new Map<EnumsKeys, Function>([
     ['au', addUser],
     ['ds', delStorage],

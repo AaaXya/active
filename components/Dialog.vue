@@ -26,9 +26,10 @@
   function shift() {
     if (!st.value) {
       bS.value = true
-      return
+    } else {
+
+      // access()
     }
-    // access()
   }
 </script>
 
@@ -56,16 +57,18 @@
         </ul>
       </div>
       <div>
-        <input type="checkbox" id="scales" v-model="st">
-        <label for="scales">勾选同意Use Google's location service?</label>
-        <button color="green-darken-1" variant="text" @click="shift">
-          Agree
-        </button><span v-show="bS">
+        <input class="accent-#9b59b6" type="checkbox" id="scales" v-model="st">
+        <label class="c-#888" for="scales">
+
+          我已阅读以上条款
+        </label>
+        <button motify variant="text" @click="shift">
+          参与活动
+        </button>
+        <span v-show="bS"> <!-- color="green-darken-1" -->
           请勾选同意
         </span>
       </div>
     </Details>
   </div>
 </template>
-
-<style scoped></style>

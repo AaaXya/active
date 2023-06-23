@@ -27,11 +27,12 @@ export default defineConfig({
         ],
     ],
     rules: [
-        [/^bc-(.+)$/, ([, color]) => ({ 'border-color': `#${color}` })],
+        [/^accent-(.+)$/, ([, color]) => ({ 'accent-color': `${color}` })],
+        [/^bc-(.+)$/, ([, color]) => ({ 'border-color': `${color}` })],
         [
             'motify',
             {
-                background: 'linear-gradient(#ec3767, #f927c9)',
+                background: 'linear-gradient(#f23667, #f927c9)',
             },
         ],
         [
@@ -42,11 +43,32 @@ export default defineConfig({
             },
         ],
     ],
+    preflights: [
+        {
+            getCSS: ({ theme }) => `
+            * {
+              color: ${theme.colors.gray?.[700] ?? '#333'};
+              padding: 0;
+              margin: 0;
+            }
+            :root{
+                --brand-primary-light:#f23667;
+                }
+                .dark {
+                    background: #222;
+                    color: #fff
+                }
+          `,
+        },
+    ],
     theme: {
         colors: {
-            bgMotify: 'linear-gradient(#ec3767, #f927c9)',
+            bgMotify: 'linear-gradient(#f23667, #f927c9)',
             brand: {
-                primary: 'hsla(var(--hue, 217), 78%, 51%)', //class="bg-brand-primary"
+                primary: {
+                    light: '#f23667',
+                    dark: '#f927c9',
+                }, //class="bg-brand-primary"
             },
             //     primary: 'var(--primary-color)',
             //     dark_bg: 'var(--dark-bg)',
