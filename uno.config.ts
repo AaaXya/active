@@ -32,7 +32,7 @@ export default defineConfig({
         [
             'motify',
             {
-                background: 'linear-gradient(#f23667, #f927c9)',
+                background: 'linear-gradient(var(--brand-primary-l),var(--brand-primary-k))',
             },
         ],
         [
@@ -42,33 +42,40 @@ export default defineConfig({
                     '0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017',
             },
         ],
+        [
+            'title-decorate',
+            {
+                content: '"●"',
+                display: 'inline-block',
+            },
+        ],
     ],
     preflights: [
         {
+            //   color: ${theme.colors.gray?.[700] ?? '#333'};
             getCSS: ({ theme }) => `
             * {
-              color: ${theme.colors.gray?.[700] ?? '#333'};
               padding: 0;
               margin: 0;
             }
             :root{
-                --brand-primary-light:#f23667;
-                }
-                .dark {
-                    background: #222;
-                    color: #fff
-                }
+                --brand-primary-l:#f23667;
+                --brand-primary-k:#f927c9;
+                --brand-primary-j:#f229d1;
+                --brand-primary-h:#f2359d;
+                --brand-primary-g:#f2b705;
+                --brand-primary-f:#f24452;
+            }
           `,
         },
     ],
     theme: {
         colors: {
-            bgMotify: 'linear-gradient(#f23667, #f927c9)',
+            c: '#fff',
             brand: {
-                primary: {
-                    light: '#f23667',
-                    dark: '#f927c9',
-                }, //class="bg-brand-primary"
+                p: {
+                    title: '#ff4452', //class="bg-brand-primary"
+                },
             },
             //     primary: 'var(--primary-color)',
             //     dark_bg: 'var(--dark-bg)',
