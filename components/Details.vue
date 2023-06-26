@@ -7,9 +7,9 @@
 </script>
 
 <template>
-  <div m="t6 b6" p6 bg-white border-rd-2 relative shadow>
+  <div m="t10 b8" p6 bg-white border-rd-2 relative shadow>
     <div v-if="titles" absolute top--6 left-50% f-c-c p2 translate-x--50% text-(2xl center) bg-brand-p-title c-c
-      border-rd-33 class="shadow-title">
+      border-rd-33 shadow-title>
       <i w-2.5 i-akar-icons-circle-fill></i>
       <div m="l-8 r-8">{{ titles }}</div>
       <i w-2.5 i-akar-icons-circle-fill></i>
