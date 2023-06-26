@@ -3,7 +3,9 @@
 
 <template>
   <div motify min-h-screen f-c-c flex-col>
-    <slot />
+    <div max-w-170>
+      <slot />
+    </div>
   </div>
 </template>
 

@@ -14,11 +14,11 @@ export default defineConfig({
         presetUno(),
         presetAttributify(),
         presetWebFonts({
-            fonts: {
-                sans: 'DM Sans',
-                serif: 'DM Serif Display',
-                mono: 'DM Mono',
-            },
+            // fonts: {
+            //     sans: 'DM Sans',
+            //     serif: 'DM Serif Display',
+            //     mono: 'DM Mono',
+            // },
             provider: 'fontshare',
         }),
         presetIcons({ scale: 1.2, warn: true }),
