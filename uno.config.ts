@@ -13,7 +13,14 @@ export default defineConfig({
     presets: [
         presetUno(),
         presetAttributify(),
-        presetWebFonts({ provider: 'fontshare' }),
+        presetWebFonts({
+            fonts: {
+                sans: 'DM Sans',
+                serif: 'DM Serif Display',
+                mono: 'DM Mono',
+            },
+            provider: 'fontshare',
+        }),
         presetIcons({ scale: 1.2, warn: true }),
     ],
     shortcuts: [
@@ -21,9 +28,15 @@ export default defineConfig({
         ['f-c-c', 'flex justify-center items-center'],
         ['flex-col', 'flex flex-col'],
         ['text-ellipsis', 'truncate'],
+
+        [
+            'btn',
+            'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 ',
+        ],
+        // opacity-75 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50
         [
             'icon-btn',
-            'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600',
+            'inline-block cursor-pointer select-none transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600',
         ],
     ],
     rules: [
@@ -36,17 +49,9 @@ export default defineConfig({
             },
         ],
         [
-            'card-shadow',
+            'shadow-title',
             {
-                'box-shadow':
-                    '0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017',
-            },
-        ],
-        [
-            'title-decorate',
-            {
-                content: '"●"',
-                display: 'inline-block',
+                'box-shadow': '0 4px #ff445288',
             },
         ],
     ],

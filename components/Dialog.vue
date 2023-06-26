@@ -34,12 +34,11 @@
 </script>
 
 <template>
-  <div class="c-#333 card-shadow">
+  <div c="#333">
     <Details titles="活动规则说明">
       <div>
         <ul list-none>
           <li>
-
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto omnis, sapiente, blanditiis maxime
             nobis quas culpa nihil ex odit itaque adipisci officiis consectetur ad sit tempore! Blanditiis rem explicabo
             dolorem.
@@ -61,8 +60,7 @@
       </div>
       <div>
         <input class="accent-#9b59b6" type="checkbox" id="scales" v-model="st">
-        <label class="c-#888" for="scales">
-
+        <label c="#888" for="scales">
           我已阅读以上条款
         </label>
         <button class="bg-[var(--brand-primary-j)] border-(none rd-4) text-4 p4" variant="text" @click="shift">
