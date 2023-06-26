@@ -77,6 +77,10 @@ export default defineConfig({
     theme: {
         colors: {
             c: '#fff',
+            tb: {
+                deep: '#fffbdb',
+                border: '#d60115',
+            },
             brand: {
                 p: {
                     title: '#ff4452', //class="bg-brand-primary"
