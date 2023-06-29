@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <div m="t10 b8" p6 bg-white border-rd-2 relative shadow>
+  <div m="t15 b10" p6 bg-white border-rd-2 relative shadow>
     <div v-if="titles" absolute top--6 left-50% f-c-c p2 translate-x--50% text-(2xl center) bg-brand-p-title c-c
       border-rd-33 shadow-title>
       <i w-2.5 i-akar-icons-circle-fill></i>
