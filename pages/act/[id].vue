@@ -7,7 +7,7 @@
 
 <template>
   <div>
-    <Turntable />
+    <Turntable :id="id" />
     <nuxt-link to="">look me</nuxt-link>
     <Details titles="如何获取机会">
       方法Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ab accusamus voluptate, fugiat libero culpa vel

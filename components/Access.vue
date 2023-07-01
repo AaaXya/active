@@ -1,13 +1,16 @@
 <script lang="ts" setup>
   const customer = useCookie('customer')
-  const checkbox = ref(false),
-    remind = ref(false)
+  const checkbox = ref(false)
+  const remind = ref(false)
 
   async function state(v: string | undefined | null) {
     if (!v) {
       return
     }
     await navigateTo('/act/' + v as string)
+
+    // const router = useRouter()
+    //   router.push(v as string)
   }
   state(customer.value)
   async function access() {

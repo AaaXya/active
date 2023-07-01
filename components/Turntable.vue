@@ -1,10 +1,21 @@
 
 <script lang="ts" setup>
 
+    const { id } = defineProps(['id']),
+        start = ref(false),
+        basal = ref(10),
+        rotate = computed(() => ({
+            'transform': 'rotate(' + basal.value + 'turn)'
+        }))
     function circl() {
+        try {
+            start.value = !start.value
+            basal.value += 0.125
+            console.log(' id', id)
+        } catch (error) {
 
+        }
     }
-
 </script>
 
 <template>
@@ -18,16 +29,15 @@
             <button @click="circl()" class=" absolute top-50% left-50% translate-(x--50% y--50%) w25 h25
                  bg-[var(--brand-primary-g)] c-c  text-size-3xl   border-(none rd-50%) z-100
              linear   ">开始</button>
-            <img absolute src="~/assets/board.svg">
+            <img absolute src="~/assets/board.svg" :style="[{
+                'transition': 'all 7s ease-out .3s'
+            }, start ? rotate : '']">
         </div>
     </div>
 </template>
 
 <style scoped>
-/* .xx {
-    border: 20px solid black;
-} */
 .linear {
-    background: linear-gradient(#fa3c4a, #de0a1e)
+    background: linear-gradient(#fa3c4a, #de0a1e);
 }
 </style>
