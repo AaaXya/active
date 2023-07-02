@@ -2,28 +2,30 @@
   const customer = useCookie('customer')
   const checkbox = ref(false)
   const remind = ref(false)
+  const supabase = useSupabaseClient()
 
-  async function state(v: string | undefined | null) {
+  function state(v: string | undefined | null) {
     if (!v) {
       return
     }
-    await navigateTo('/act/' + v as string)
+    navigateTo('/act/' + v as string)
 
     // const router = useRouter()
     //   router.push(v as string)
   }
   state(customer.value)
   async function access() {
-    const uid = nanoid()
-    customer.value = uid
-    const { data, error } = await useFetch('/api/programs', {
-      query: {
-        dispose: 'au'
-      }
-    })
-    if (error.value)
-      throw alert(error.value)
-    state(customer.value)
+    try {
+      const uid = nanoid(11)
+      customer.value = uid
+
+      const { error } = await supabase
+        .from('users').insert({ phone: uid, prize: 0, credit: 0 })
+
+      state(uid)
+    } catch (error) {
+      console.log(error);
+    }
   }
   function shift() {
     if (!checkbox.value) {

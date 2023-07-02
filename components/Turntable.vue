@@ -1,19 +1,48 @@
 
 <script lang="ts" setup>
-
     const { id } = defineProps(['id']),
         start = ref(false),
         basal = ref(10),
         rotate = computed(() => ({
             'transform': 'rotate(' + basal.value + 'turn)'
         }))
-    function circl() {
-        try {
-            start.value = !start.value
-            basal.value += 0.125
-            console.log(' id', id)
-        } catch (error) {
 
+
+    const supabase = useSupabaseClient()
+    function getRandomRotate(min: number, max: number) {
+        return Math.floor(Math.random() * (max - min) + min) / 1000;
+    }
+
+    async function circl() {
+        try {
+            const { data } = await supabase
+                .from('users')
+                .select()
+                .eq('phone', id)
+            if (!data[0].prize_code) {
+
+                const { data, error } = await useFetch('/api/lottery')
+                const { prize, code } = unref(data)
+
+                //test complete value = false
+                start.value = !start.value
+
+
+                basal.value = 10 + (0.125 * prize - getRandomRotate(15, 110))
+                console.log(basal);
+
+                if (code) {
+                    const { error } = await supabase
+                        .from('users')
+                        .update({ prize, prize_code: code })
+                        .eq('phone', id)
+                }
+
+                //礼盒 爆开 动画 生成 二维码
+            }
+
+        } catch (error) {
+            console.log(error)
         }
     }
 </script>
