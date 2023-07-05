@@ -8,7 +8,7 @@
 <template>
   <div>
     <Turntable :id="id" />
-    <nuxt-link to="">look me</nuxt-link>
+    <nuxt-link to="" c-c>点我查看奖品</nuxt-link>
     <Details titles="如何获取机会">
       方法Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ab accusamus voluptate, fugiat libero culpa vel
       voluptatem optio esse quis exercitationem tempora? Distinctio voluptates sit perferendis minima id a adipisci!
