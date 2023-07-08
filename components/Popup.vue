@@ -11,9 +11,11 @@
 
 <template>
   <div absolute top-50% left-50% z-250 translate-(x--50% y--50%)>
-    <div>
-
-      <img class="slide-top" src="~/assets/pop-up.png">
+    <div class="slide-top" h135 w131>
+      <p text-center class="c-#f08537
+      " pt-50 text-4xl font-700>
+        满100减19
+      </p>
     </div>
     <!-- <qrcode-vue :value="value" :size="size" level="H" /> -->
   </div>
@@ -21,6 +23,7 @@
 
 <style scoped>
 .slide-top {
+  background-image: url("~/assets/pop-up.png");
   animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
