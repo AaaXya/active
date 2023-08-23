@@ -42,11 +42,14 @@
 <template>
     <Popup />
     <div f-c-c m="t20 b15">
+        <!-- 背景底盘 -->
         <div absolute>
             <img src="~/assets/x1.png">
         </div>
+        <!-- 边框 -->
         <div class="b-(solid 7 rd-50% color-#d80015)
         " absolute w146 h146 z100></div>
+        <!-- 转盘 -->
         <div w160 h160 relative>
             <button @click="circl()" class=" absolute top-50% left-50% translate-(x--50% y--50%) w25 h25
                  bg-[var(--brand-primary-g)] c-c  text-size-3xl   border-(none rd-50%) z-100
