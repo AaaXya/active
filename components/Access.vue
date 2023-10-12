@@ -1,17 +1,25 @@
 <script lang="ts" setup>
+  // import useAuth from '~/composables/useCertify';
+
   const customer = useCookie('customer')
   const checkbox = ref(false)
   const remind = ref(false)
   const supabase = useSupabaseClient()
+  const router = useRouter()
+
+  const auth = useCertify
+  auth
+    .confirm('Iyo9xHvsGVbW-9A9v4sDmQ', true)
+    .then((response) => console.log('Confirmation email sent', response))
+    .catch((error) => console.log("It's an error", error));
 
   function state(v: string | undefined | null) {
     if (!v) {
       return
     }
-    navigateTo('/act/' + v as string)
+    // navigateTo('/act/' + v as string)
 
-    // const router = useRouter()
-    //   router.push(v as string)
+    router.push(v as string)
   }
   state(customer.value)
   async function access() {
