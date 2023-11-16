@@ -4,37 +4,31 @@
   const customer = useCookie('customer')
   const checkbox = ref(false)
   const remind = ref(false)
-  const supabase = useSupabaseClient()
-  const router = useRouter()
-
-  const auth = useCertify
-  auth
-    .confirm('Iyo9xHvsGVbW-9A9v4sDmQ', true)
-    .then((response) => console.log('Confirmation email sent', response))
-    .catch((error) => console.log("It's an error", error));
 
   function state(v: string | undefined | null) {
     if (!v) {
       return
     }
-    // navigateTo('/act/' + v as string)
-
-    router.push(v as string)
+    navigateTo(v as string)
+    location.reload()
+    // router.push(v as string)
   }
+
   state(customer.value)
   async function access() {
     try {
       const uid = nanoid(11)
       customer.value = uid
 
-      const { error } = await supabase
-        .from('users').insert({ phone: uid, prize: 0, credit: 0 })
+
+      createUser(uid)
 
       state(uid)
     } catch (error) {
       console.log(error);
     }
   }
+
   function shift() {
     if (!checkbox.value) {
       remind.value = true

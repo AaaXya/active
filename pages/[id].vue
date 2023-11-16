@@ -1,8 +1,15 @@
 <script lang="ts" setup>
-  definePageMeta({
-    layout: 'act'
-  })
   const { id } = useRoute().params
+
+  const temp = await useFetch('/api/userdata', {
+    query: {
+      id
+    }
+  })
+  // instructions.createUser(id)
+  instructions.getList()
+
+
 </script>
 
 <template>
