@@ -6,10 +6,10 @@
       id
     }
   })
-  // instructions.createUser(id)
-  instructions.getList()
-
-
+  instructions.createUser(id, new Date())
+  // instructions.getList()
+  // instructions.querList(id)
+  // instructions.findFixed(10)
 </script>
 
 <template>
