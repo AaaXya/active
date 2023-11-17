@@ -1,14 +1,24 @@
 <script lang="ts" setup>
   const { id } = useRoute().params
+  const user_id = useCookie('__id')
+  // const temp = await useFetch('/api/userdata', {
+  //   query: {
+  //     id
+  //   }
+  // })
+  // instructions.createUser(id)
+  console.log(user_id);
 
-  const temp = await useFetch('/api/userdata', {
-    query: {
-      id
-    }
-  })
-  instructions.createUser(id, new Date())
-  // instructions.getList()
-  // instructions.querList(id)
+  const user_list = await instructions.querySelectAttribute('uid', id)
+  if (!user_id || user_list.total === 0) {
+
+    navigateTo('/')
+    location.reload()
+  }
+
+  const doc_id = user_id.value!
+  instructions.queryList(doc_id)
+  // instructions.queryList(id)
   // instructions.findFixed(10)
 </script>
 

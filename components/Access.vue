@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   // import useAuth from '~/composables/useCertify';
-
+  const user_id = useCookie('__id')
   const customer = useCookie('customer')
   const checkbox = ref(false)
   const remind = ref(false)
@@ -21,7 +21,7 @@
       customer.value = uid
 
 
-      createUser(uid)
+      user_id.value = await instructions.createUser(uid)
 
       state(uid)
     } catch (error) {
