@@ -11,10 +11,14 @@
     // text = ref('满100减19')
 
     text = ref('7元饮品劵')
+
+  function toggle() {
+    no_off.value = !no_off.value
+  }
 </script>
 
 <template>
-  <div absolute top-50% left-50% z-250 m-l--75 w-150 f-c-c flex-col class="slide ">
+  <div v-if="no_off" @click="toggle" absolute top-50% left-50% z-250 m-l--75 w-150 f-c-c flex-col class="slide ">
     <div class="bg-pop" h135 w131>
       <p text-center class="c-#f08537
       " pt-50 text-4xl font-700>{{ text }}</p>

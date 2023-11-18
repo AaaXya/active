@@ -10,7 +10,7 @@ const DB: [string, string] = [DATABASE_ID, COLLECTION_ID]
 const databases = new Databases(client)
 client.setEndpoint('https://cloud.appwrite.io/v1').setProject(PROJECT_ID)
 
-type Attribute = 'uid' | 'uptime' | 'integral' | 'gift'
+type Attribute = 'uid' | 'uptime' | 'integral' | 'gift' | 'code'
 type UserRelationship = {
 	[key in Attribute]?: any
 }
@@ -30,16 +30,14 @@ export const instructions = {
 		console.log(db, 'on create')
 		return db.$id
 	},
-	async queryList(doc_id: string) {
+	async getDocument(doc_id: string) {
 		const doc = await databases.getDocument(...DB, doc_id)
 
 		console.log(doc)
 
-		// if (doc.total === 1) {
-		// 	doc.documents[0].$id
-		// }
+		return doc
 	},
-	async querySelectAttribute(type: Attribute, value: any) {
+	async queryList(type: Attribute, value: any) {
 		const doc_list = await databases.listDocuments(...DB, [Query.equal(type, value)])
 
 		return doc_list
