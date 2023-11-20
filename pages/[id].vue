@@ -23,7 +23,7 @@
 
 <template>
   <div>
-    <Turntable :id="id" />
+    <Turntable :id="user_id" />
     <nuxt-link to="/" c-c>查看我的奖品</nuxt-link>
     <Details titles="如何获取机会">
       方法Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ab accusamus voluptate, fugiat libero culpa vel

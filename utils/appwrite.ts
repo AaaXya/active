@@ -37,6 +37,13 @@ export const instructions = {
 
 		return doc
 	},
+	async updateDocument(doc_id: string, data: object) {
+		const doc = await databases.updateDocument(...DB, doc_id, data)
+
+		console.log(doc)
+
+		return doc
+	},
 	async queryList(type: Attribute, value: any) {
 		const doc_list = await databases.listDocuments(...DB, [Query.equal(type, value)])
 

@@ -4,31 +4,42 @@
         basal = ref(0),
         rota = computed(() => basal.value + 'turn')
 
-    const supabase = useSupabaseClient()
+    const customer = useCookie('customer')
     function getRandomRotate(min: number, max: number) {
         return Math.floor(Math.random() * (max - min) + min) / 1000;
     }
 
     async function circl() {
         try {
-            const { data } = await supabase
-                .from('users')
-                .select()
-                .eq('phone', id)
-            if (data && !data[0].prize_code) {
+            const { message, code, integral } = await useGoTurntable(id)
+            if (message === 'ok') {
 
-                const { data, error } = await useFetch('/api/lottery')
-                const { prize, code } = unref(data)
+                const text = useEncrypt(customer.value!)
+                console.log(text);
+                console.log(useDecrypt(text));
 
-                basal.value = 10 + (0.125 * prize - getRandomRotate(15, 110))
-                console.log(basal);
+                const { data, error } = await useFetch('/api/lottery', { method: 'POST', body: text })
 
-                if (code) {
-                    const { error } = await supabase
-                        .from('users')
-                        .update({ prize, prize_code: code })
-                        .eq('phone', id)
-                }
+                console.log(data);
+
+                // if (data && data.code) {
+                //     // 处理非空的code值
+
+                //     const {code} = data
+
+
+                // } else {
+                //     // 处理code为空的情况  积分
+                // }
+
+                // const { prize, code } = unref(data)
+                // basal.value = 10 + (0.125 * index - getRandomRotate(15, 110))
+                // console.log(basal);
+
+                // if (code) {
+                //     instructions.updateDocument(id, { prize, prize_code: code })
+
+                // }
 
                 //礼盒 爆开 动画 生成 二维码
             }

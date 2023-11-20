@@ -1,16 +1,15 @@
 export default async (id: string) => {
-	const source = await instructions.getDocument(id)
-
-	const { uid, uptime, integral, gift, code } = source
+	const { uid, uptime, integral, gift, code } = await instructions.getDocument(id)
 
 	console.log(uid, uptime, integral, gift, code)
-
-	const totalTime = (new Date().getTime() - new Date(uptime).getTime()) / 1000
+	const time1 = new Date()
+	const time2 = new Date(uptime)
+	const totalTime = (time1.getTime() - time2.getTime()) / 1000
 	console.log(totalTime)
 	const day = totalTime / 86400
 	console.log(day)
 	const res = { message: 'ok', code, integral }
-	if (day < 1) {
+	if (time1.getDate() === time2.getDate() && day < 1) {
 		res.message = 'notYetInTime'
 	}
 	if (code) {
