@@ -18,7 +18,7 @@
                 console.log(text);
                 console.log(useDecrypt(text));
 
-                const { data, error } = await useFetch('/api/lottery', { method: 'POST', body: text })
+                const { data, error } = await useFetch('/api/lottery', { method: 'POST', body: { identifier: text } })
 
                 console.log(data);
 
