@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "appwrite": "^13.0.0",
+    "crypto-js": "^4.2.0",
     "nanoid": "^4.0.2",
     "qrcode.vue": "^3.4.0"
   }

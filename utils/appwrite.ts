@@ -11,7 +11,7 @@ const databases = new Databases(client)
 client.setEndpoint('https://cloud.appwrite.io/v1').setProject(PROJECT_ID)
 
 type Attribute = 'uid' | 'uptime' | 'integral' | 'gift' | 'code'
-type UserRelationship = {
+export type UserRelationship = {
 	[key in Attribute]?: any
 }
 export const instructions = {
@@ -24,7 +24,7 @@ export const instructions = {
 		console.log(uni)
 		const user: Partial<UserRelationship> = {
 			uid: x,
-			uptime: new Date(),
+			// uptime: new Date(),
 		}
 		const db = await databases.createDocument(...DB, uni, user)
 		console.log(db, 'on create')
@@ -37,7 +37,7 @@ export const instructions = {
 
 		return doc
 	},
-	async updateDocument(doc_id: string, data: object) {
+	async updateDocument(doc_id: string, data: UserRelationship) {
 		const doc = await databases.updateDocument(...DB, doc_id, data)
 
 		console.log(doc)

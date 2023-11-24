@@ -8,6 +8,9 @@ dependencies:
   appwrite:
     specifier: ^13.0.0
     version: 13.0.0
+  crypto-js:
+    specifier: ^4.2.0
+    version: 4.2.0
   nanoid:
     specifier: ^4.0.2
     version: registry.npmmirror.com/nanoid@4.0.2
@@ -635,6 +638,10 @@ packages:
       node-fetch: 2.6.7
     transitivePeerDependencies:
       - encoding
+    dev: false
+
+  /crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
     dev: false
 
   /csstype@3.1.2:

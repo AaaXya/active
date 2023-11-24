@@ -12,39 +12,36 @@
     async function circl() {
         try {
             const { message, code, integral } = await useGoTurntable(id)
-            if (message === 'ok') {
 
-                const text = useEncrypt(customer.value!)
-                console.log(text);
-                console.log(useDecrypt(text));
-
-                const { data, error } = await useFetch('/api/lottery', { method: 'POST', body: { identifier: text } })
-
-                console.log(data);
-
-                // if (data && data.code) {
-                //     // 处理非空的code值
-
-                //     const {code} = data
-
-
-                // } else {
-                //     // 处理code为空的情况  积分
-                // }
-
-                // const { prize, code } = unref(data)
-                // basal.value = 10 + (0.125 * index - getRandomRotate(15, 110))
-                // console.log(basal);
-
-                // if (code) {
-                //     instructions.updateDocument(id, { prize, prize_code: code })
-
-                // }
-
-                //礼盒 爆开 动画 生成 二维码
+            if (message !== 'ok') {
+                //   pop create message info
+                return
             }
+            const text = useEncrypt(customer.value!)
+            // console.log(text);
+            // console.log(useDecrypt(text));
+
+            const { data, error } = await useFetch('/api/lottery', { method: 'POST', body: { user: id, identifier: text } })
+            if (!data.value) {
+                //   pop create message info
+                return
+            }
+            const res = (JSON.parse(useDecrypt(data.value)));
+
+
+            // const { prize, code } = unref(data)
+            // basal.value = 10 + (0.125 * index - getRandomRotate(15, 110))
+            // console.log(basal);
+
+            // if (code) {
+            //     instructions.updateDocument(id, { prize, prize_code: code })
+
+            // }
+
+            //礼盒 爆开 动画 生成 二维码
 
         } catch (error) {
+
             console.log(error)
         }
     }
