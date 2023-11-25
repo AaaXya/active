@@ -1,64 +1,74 @@
 import {
-    defineConfig,
-    presetAttributify,
-    presetUno,
-    presetIcons,
-    transformerDirectives,
-    transformerVariantGroup,
-    presetWebFonts,
+	defineConfig,
+	presetAttributify,
+	presetUno,
+	presetIcons,
+	transformerDirectives,
+	transformerVariantGroup,
+	presetWebFonts,
 } from 'unocss'
 
 export default defineConfig({
-    // ...UnoCSS options
-    presets: [
-        presetUno(),
-        presetAttributify(),
-        presetWebFonts({
-            // fonts: {
-            //     sans: 'DM Sans',
-            //     serif: 'DM Serif Display',
-            //     mono: 'DM Mono',
-            // },
-            provider: 'fontshare',
-        }),
-        presetIcons({ scale: 1.2, warn: true }),
-    ],
-    shortcuts: [
-        ['wh-full', 'w-full h-full'],
-        ['f-c-c', 'flex justify-center items-center'],
-        ['flex-col', 'flex flex-col'],
-        ['text-ellipsis', 'truncate'],
+	// ...UnoCSS options
+	presets: [
+		presetUno(),
+		presetAttributify(),
+		presetWebFonts({
+			// fonts: {
+			//     sans: 'DM Sans',
+			//     serif: 'DM Serif Display',
+			//     mono: 'DM Mono',
+			// },
+			provider: 'fontshare',
+		}),
+		presetIcons({ scale: 1.2, warn: true }),
+	],
+	shortcuts: [
+		['pr', 'relative'],
+		['pa', 'absolute'],
+		['pf', 'fixed'],
+		['ps', 'sticky'],
 
-        [
-            'btn',
-            'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 ',
-        ],
-        // opacity-75 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50
-        [
-            'icon-btn',
-            'inline-block cursor-pointer select-none transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600',
-        ],
-    ],
-    rules: [
-        [/^accent-(.+)$/, ([, color]) => ({ 'accent-color': `${color}` })],
-        [/^bc-(.+)$/, ([, color]) => ({ 'border-color': `${color}` })],
-        [
-            'motify',
-            {
-                background: 'linear-gradient(var(--brand-primary-l),var(--brand-primary-k))',
-            },
-        ],
-        [
-            'shadow-title',
-            {
-                'box-shadow': '0 4px #ff445288',
-            },
-        ],
-    ],
-    preflights: [
-        {
-            //   color: ${theme.colors.gray?.[700] ?? '#333'};
-            getCSS: ({ theme }) => `
+		// position layout
+		['p-x-c', 'pa left-1/2 -translate-x-1/2'],
+		['p-y-c', 'pa top-1/2 -translate-y-1/2'],
+		['p-c-c', 'pxc pyc'],
+
+		['wh-full', 'w-full h-full'],
+		['f-c-c', 'flex justify-center items-center'],
+		['flex-col', 'flex flex-col'],
+		['text-ellipsis', 'truncate'],
+
+		[
+			'btn',
+			'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 ',
+		],
+		// opacity-75 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50
+		[
+			'icon-btn',
+			'inline-block cursor-pointer select-none transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600',
+		],
+	],
+	rules: [
+		[/^accent-(.+)$/, ([, color]) => ({ 'accent-color': `${color}` })],
+		[/^bc-(.+)$/, ([, color]) => ({ 'border-color': `${color}` })],
+		[
+			'motify',
+			{
+				background: 'linear-gradient(var(--brand-primary-l),var(--brand-primary-k))',
+			},
+		],
+		[
+			'shadow-title',
+			{
+				'box-shadow': '0 4px #ff445288',
+			},
+		],
+	],
+	preflights: [
+		{
+			//   color: ${theme.colors.gray?.[700] ?? '#333'};
+			getCSS: ({ theme }) => `
             * {
               padding: 0;
               margin: 0;
@@ -72,23 +82,23 @@ export default defineConfig({
                 --brand-primary-f:#f24452;
             }
           `,
-        },
-    ],
-    theme: {
-        colors: {
-            c: '#fff',
-            tb: {
-                deep: '#fffbdb',
-                border: '#d60115',
-            },
-            brand: {
-                p: {
-                    title: '#ff4452', //class="bg-brand-primary"
-                },
-            },
-            //     primary: 'var(--primary-color)',
-            //     dark_bg: 'var(--dark-bg)',
-        },
-    },
-    transformers: [transformerDirectives(), transformerVariantGroup()],
+		},
+	],
+	theme: {
+		colors: {
+			c: '#fff',
+			tb: {
+				deep: '#fffbdb',
+				border: '#d60115',
+			},
+			brand: {
+				p: {
+					title: '#ff4452', //class="bg-brand-primary"
+				},
+			},
+			//     primary: 'var(--primary-color)',
+			//     dark_bg: 'var(--dark-bg)',
+		},
+	},
+	transformers: [transformerDirectives(), transformerVariantGroup()],
 })

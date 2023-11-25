@@ -9,9 +9,7 @@
     if (!v) {
       return
     }
-    navigateTo(v as string)
-    location.reload()
-    // router.push(v as string)
+    location.href = v;
   }
 
   state(customer.value)

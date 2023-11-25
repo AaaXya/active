@@ -8,7 +8,7 @@ export default async (id: string) => {
 	const day = totalTime / 86400
 	console.log(day)
 	const res = { message: 'ok', code, integral }
-	if (time1.getDate() === time2.getDate() && day < 1) {
+	if (time1.getDate() === time2.getDate() || day < 1) {
 		res.message = 'notYetInTime'
 	}
 	if (code) {

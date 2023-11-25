@@ -32,9 +32,6 @@ export const instructions = {
 	},
 	async getDocument(doc_id: string) {
 		const doc = await databases.getDocument(...DB, doc_id)
-
-		console.log(doc)
-
 		return doc
 	},
 	async updateDocument(doc_id: string, data: UserRelationship) {

@@ -26,17 +26,11 @@
                 //   pop create message info
                 return
             }
-            const res = (JSON.parse(useDecrypt(data.value)));
+
+            const { gift: index, code: code_context } = JSON.parse(useDecrypt(data.value));
+            basal.value = 10 + (0.125 * index - getRandomRotate(15, 110))
 
 
-            // const { prize, code } = unref(data)
-            // basal.value = 10 + (0.125 * index - getRandomRotate(15, 110))
-            // console.log(basal);
-
-            // if (code) {
-            //     instructions.updateDocument(id, { prize, prize_code: code })
-
-            // }
 
             //礼盒 爆开 动画 生成 二维码
 
