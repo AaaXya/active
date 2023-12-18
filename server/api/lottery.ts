@@ -28,11 +28,10 @@ const map: Item[] = [
 
 export default defineEventHandler(async (event) => {
 	const { identifier, user } = await readBody(event)
-
 	if (!identifier) {
 		throw createError({
 			statusCode: 400,
-			statusMessage: 'ID should be an integer',
+			statusMessage: 'ID should be a valid value',
 		})
 	}
 	const outcome = useDecrypt(identifier)

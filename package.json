@@ -16,9 +16,9 @@
     "nuxt": "^3.5.0"
   },
   "dependencies": {
-    "appwrite": "^13.0.0",
+    "appwrite": "^13.0.1",
     "crypto-js": "^4.2.0",
     "nanoid": "^4.0.2",
-    "qrcode.vue": "^3.4.0"
+    "qrcode.vue": "^3.4.1"
   }
 }
