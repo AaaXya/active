@@ -1,15 +1,16 @@
 <script lang="ts" setup>
-  // import useAuth from '~/composables/useCertify';
   const user_id = useCookie('__id')
   const customer = useCookie('customer')
   const checkbox = ref(false)
   const remind = ref(false)
 
-  function state(v: string | undefined | null) {
+  async function state(v: string | undefined | null) {
     if (!v) {
       return
     }
-    location.href = v;
+
+    await navigateTo('/' + v)
+    // location.href = v
   }
 
   state(customer.value)
