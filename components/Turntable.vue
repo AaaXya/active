@@ -20,7 +20,7 @@
             const text = useEncrypt(customer.value!)
             // console.log(text);
             // console.log(useDecrypt(text));
-
+            basal.value = 10
             const { data, error } = await useFetch('/api/lottery', { method: 'POST', body: { user: id, identifier: text } })
             if (!data.value) {
                 //   pop create message info
@@ -28,11 +28,15 @@
             }
 
             const { gift: index, code: code_context } = JSON.parse(useDecrypt(data.value));
-            basal.value = 10 + (0.125 * index - getRandomRotate(15, 110))
+            basal.value += (0.125 * index - getRandomRotate(15, 110))
 
 
 
             //礼盒 爆开 动画 生成 二维码
+
+
+
+
 
         } catch (error) {
 
@@ -57,7 +61,7 @@
                  bg-[var(--brand-primary-g)] c-c  text-size-3xl   border-(none rd-50%) z-100
              linear   ">开始</button>
             <div absolute class="cxk"></div>
-            <img absolute class="ra" src="~/assets/board.svg">
+            <img absolute top-.5 left-.5 h158 w158 class="ra" src="~/assets/board.svg">
         </div>
     </div>
 </template>
@@ -69,7 +73,7 @@
 
 .ra {
     transform: rotate(v-bind(rota));
-    transition: all 7s ease-out .3s
+    transition: all 7s ease-out .2s
 }
 
 .cxk {
