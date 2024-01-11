@@ -4,8 +4,7 @@
   const user_id = useCookie('__id')
 
   const user_list = await instructions.queryList('uid', id)
-  // console.log(user_list, 'list');
-
+  // console.log(user_list, 'list'); 
 
   const coding = ref(null), collection = ref(0),
     states = ref(false)
@@ -77,6 +76,7 @@
 
     <Details titles="我的奖品">
       reward {{ coding }}
+      积分兑换
     </Details>
     <Details titles="如何获取机会">
       方法Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ab accusamus voluptate, fugiat libero culpa vel
